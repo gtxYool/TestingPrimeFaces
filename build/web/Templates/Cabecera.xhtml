@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+        <title>Ejemplo JSF and PrimeFaces</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:submenu label="Facturacion">
+                    <p:menuitem value="Agregar" url="AgregarFacturaView.xhtml"/>
+                    <p:menuitem value="Listar" url="ListaFacturaView.xhtml"/>
+                </p:submenu>
+                <p:submenu label="Clientes">
+                    <p:menuitem value="Listar" url="ListaClienteView.xhtml"/>
+                    <p:menuitem value="Agregar" url="AgregarClienteView.xhtml"/>
+                    <p:menuitem value="Modificar" url="#"/>
+                </p:submenu>
+            </p:menubar>
+        </h:form>
+    </h:body>
+</html>
