@@ -17,12 +17,12 @@
     <ui:define name="content">
         <h:form id="form1">
             <p:panelGrid id="grid" columns="2" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4  " styleClass="customPanelGrid" >
-                 <h:outputLabel for="name" value="Nombre: " style="alignment-adjust: "/>
-                 <p:inputText id="name" value="#{userBean.nombre}"/>
-                    <h:outputLabel for="nit" value="Nit: " style="alignment-adjust: "/>
-                    <p:inputText id="nit" value="#{userBean.nit}" />
-                    <p:commandButton value="update" update="@form" process="#{userBean.test()}"/>
-            </p:panelGrid>
+                <h:outputLabel for="name" value="Nombre: " style="alignment-adjust: "/>
+                <p:inputText id="name" value="#{userBean.nombre}"/>
+                <h:outputLabel for="nit" value="Nit: " style="alignment-adjust: "/>
+                <p:inputText id="nit" value="#{userBean.nit}" />
+            </p:panelGrid> 
+            <p:commandButton value="update" update=":form1:grid" action="#{userBean.test()}"/>
         </h:form>
     </ui:define>
 

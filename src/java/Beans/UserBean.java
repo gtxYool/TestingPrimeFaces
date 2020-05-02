@@ -28,10 +28,11 @@ public class UserBean implements Serializable{
        nombre="";
        nit="";
    }
-    public void test(){
+    public boolean test(){
         System.out.println(nombre+" "+nit);
         RequestContext context = RequestContext.getCurrentInstance();
         context.reset("form1");
+        return true;
     }
     
     public String getNombre() {
