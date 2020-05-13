@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./Templates/SimpleP.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+
+        <h:form style="display: flex; align-items: center; justify-content: center">
+            <p:growl showDetail="true" life="2500" autoUpdate="true"/>
+            <p:panelGrid columns="2">
+                <f:facet name="header">
+                    <h:outputLabel value="Detalle Factura"/>
+                </f:facet>
+                <h:outputLabel for="nit" value="*Nit:"/>
+                <p:inputText id="nit" maxlength="20" required="true"/>
+                <h:outputLabel for="cliente" value="*Cliente:"/>
+                <p:inputText id="cliente" maxlength="20" required="true"/>
+
+
+                <h:outputLabel for="Cod" value="*Código:"/>
+                <p:inputText id="cod" maxlength="10" required="true"/>
+                <h:outputLabel for="precio" value="*Precio:"/>
+                <p:inputText id="precio" type="number" maxlength="9" required="true"/>
+                <h:outputLabel for="cantidad" value="*Cantidad:"/>
+                <p:inputText id="cantidad" type="number" maxlength="9" required="true"/>
+                <f:facet name="footer" >   
+                    <p:commandButton value="Agregar" style="width: auto"/>
+                    <p:commandButton value="Guardar" style="width: auto"/>
+                </f:facet>
+            </p:panelGrid>
+
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

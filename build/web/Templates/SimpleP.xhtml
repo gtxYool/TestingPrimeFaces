@@ -14,17 +14,30 @@
     </h:head>
 
     <h:body>
-        <ui:include src="/Templates/Cabecera.xhtml"/>
+
         <div id="top">
-            <ui:insert name="top">Top</ui:insert>
+            <h:form>
+                <p:menubar>
+                    <p:submenu label="Facturacion">
+                        <p:menuitem value="Agregar" url="AgregarFactura.xhtml"/>
+                        <p:menuitem value="Listar" url="ListarFacturas.xhtml"/>
+                    </p:submenu>
+                    <p:submenu label="Clientes">
+                        <p:menuitem value="Listar" url="ListarClientes.xhtml"/>
+                        <p:menuitem value="Agregar" url="AgregarClienteView.xhtml"/>
+                        <p:menuitem value="Modificar" url="ModificarCliente.xhtml"/>
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+            <ui:insert name="top"></ui:insert>
         </div>
         <div>
             <div id="left">
-                <ui:insert name="left">Left</ui:insert>
+                <ui:insert name="left"></ui:insert>
             </div>
             <div>
                 <div id="right">
-                    <ui:insert name="right">Right</ui:insert>
+                    <ui:insert name="right"></ui:insert>
                 </div>
                 <div id="content" class="right_content">
                     <ui:insert name="content">Content</ui:insert>
@@ -32,7 +45,7 @@
             </div>
         </div>
         <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
+            <ui:insert name="bottom"></ui:insert>
         </div>
 
     </h:body>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://EjemploWS.InduccionWs.guatx.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://EjemploWS.InduccionWs.guatx.com/">
+
+<xs:element name="BUSCAR_FACTURA" type="tns:BUSCAR_FACTURA"/>
+
+<xs:element name="BUSCAR_FACTURAResponse" type="tns:BUSCAR_FACTURAResponse"/>
+
+<xs:element name="ELIMINAR_FACTURA" type="tns:ELIMINAR_FACTURA"/>
+
+<xs:element name="ELIMINAR_FACTURAResponse" type="tns:ELIMINAR_FACTURAResponse"/>
+
+<xs:element name="FILTRAR_LISTA_FACTURA" type="tns:FILTRAR_LISTA_FACTURA"/>
+
+<xs:element name="FILTRAR_LISTA_FACTURAResponse" type="tns:FILTRAR_LISTA_FACTURAResponse"/>
+
+<xs:element name="INSERTAR_FACTURA" type="tns:INSERTAR_FACTURA"/>
+
+<xs:element name="INSERTAR_FACTURAResponse" type="tns:INSERTAR_FACTURAResponse"/>
+
+<xs:element name="LISTAR" type="tns:LISTAR"/>
+
+<xs:element name="LISTARResponse" type="tns:LISTARResponse"/>
+
+<xs:element name="MODIFICAR_FACTURA" type="tns:MODIFICAR_FACTURA"/>
+
+<xs:element name="MODIFICAR_FACTURAResponse" type="tns:MODIFICAR_FACTURAResponse"/>
+
+<xs:element name="getDetalles_factura" type="tns:getDetalles_factura"/>
+
+<xs:element name="getDetalles_facturaResponse" type="tns:getDetalles_facturaResponse"/>
+
+<xs:complexType name="getDetalles_factura">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDetalles_facturaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:detalleFactura" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detalleFactura">
+<xs:sequence>
+<xs:element name="cantidad" type="xs:int"/>
+<xs:element name="codproducto" type="xs:string" minOccurs="0"/>
+<xs:element name="numdetalle" type="xs:int"/>
+<xs:element name="numerofactura" type="xs:string" minOccurs="0"/>
+<xs:element name="observaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:double"/>
+<xs:element name="seriefactura" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BUSCAR_FACTURA">
+<xs:sequence>
+<xs:element name="numero_factura" type="xs:string" minOccurs="0"/>
+<xs:element name="serie_factura" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BUSCAR_FACTURAResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:factura" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="factura">
+<xs:sequence>
+<xs:element name="detallefactura" type="tns:detalleFactura" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="nit" type="xs:string" minOccurs="0"/>
+<xs:element name="numerofactura" type="xs:string" minOccurs="0"/>
+<xs:element name="seriefactura" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MODIFICAR_FACTURA">
+<xs:sequence>
+<xs:element name="factura" type="tns:factura" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MODIFICAR_FACTURAResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="INSERTAR_FACTURA">
+<xs:sequence>
+<xs:element name="Factura" type="tns:factura" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="INSERTAR_FACTURAResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LISTAR">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="LISTARResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:factura" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FILTRAR_LISTA_FACTURA">
+<xs:sequence>
+<xs:element name="filtro" type="xs:string" minOccurs="0"/>
+<xs:element name="where" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FILTRAR_LISTA_FACTURAResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:factura" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ELIMINAR_FACTURA">
+<xs:sequence>
+<xs:element name="factura" type="tns:factura" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ELIMINAR_FACTURAResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

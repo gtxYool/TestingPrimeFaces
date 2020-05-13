@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://EjemploWS.InduccionWs.guatx.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://EjemploWS.InduccionWs.guatx.com/">
+
+<xs:element name="BUSCAR_CLIENTE" type="tns:BUSCAR_CLIENTE"/>
+
+<xs:element name="BUSCAR_CLIENTEResponse" type="tns:BUSCAR_CLIENTEResponse"/>
+
+<xs:element name="ELIMINAR_CLIENTE" type="tns:ELIMINAR_CLIENTE"/>
+
+<xs:element name="ELIMINAR_CLIENTEResponse" type="tns:ELIMINAR_CLIENTEResponse"/>
+
+<xs:element name="FILTRAR_LISTA_CLIENTE" type="tns:FILTRAR_LISTA_CLIENTE"/>
+
+<xs:element name="FILTRAR_LISTA_CLIENTEResponse" type="tns:FILTRAR_LISTA_CLIENTEResponse"/>
+
+<xs:element name="INSERTAR_CLIENTE" type="tns:INSERTAR_CLIENTE"/>
+
+<xs:element name="INSERTAR_CLIENTEResponse" type="tns:INSERTAR_CLIENTEResponse"/>
+
+<xs:element name="LISTAR_CLIENTE" type="tns:LISTAR_CLIENTE"/>
+
+<xs:element name="LISTAR_CLIENTEResponse" type="tns:LISTAR_CLIENTEResponse"/>
+
+<xs:element name="MODIFICAR_CLIENTE" type="tns:MODIFICAR_CLIENTE"/>
+
+<xs:element name="MODIFICAR_CLIENTEResponse" type="tns:MODIFICAR_CLIENTEResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:complexType name="ELIMINAR_CLIENTE">
+<xs:sequence>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nit" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ELIMINAR_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="INSERTAR_CLIENTE">
+<xs:sequence>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="INSERTAR_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LISTAR_CLIENTE">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="LISTAR_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MODIFICAR_CLIENTE">
+<xs:sequence>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MODIFICAR_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BUSCAR_CLIENTE">
+<xs:sequence>
+<xs:element name="nit" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BUSCAR_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FILTRAR_LISTA_CLIENTE">
+<xs:sequence>
+<xs:element name="filtro" type="xs:string" minOccurs="0"/>
+<xs:element name="where" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FILTRAR_LISTA_CLIENTEResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
