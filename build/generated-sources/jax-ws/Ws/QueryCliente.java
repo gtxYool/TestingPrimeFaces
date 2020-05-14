@@ -42,34 +42,16 @@ public interface QueryCliente {
 
     /**
      * 
-     * @param filtro
-     * @param where
-     * @return
-     *     returns java.util.List<Ws.Cliente>
-     */
-    @WebMethod(operationName = "FILTRAR_LISTA_CLIENTE")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "FILTRAR_LISTA_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTACLIENTE")
-    @ResponseWrapper(localName = "FILTRAR_LISTA_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTACLIENTEResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTEResponse")
-    public List<Cliente> filtrarLISTACLIENTE(
-        @WebParam(name = "filtro", targetNamespace = "")
-        String filtro,
-        @WebParam(name = "where", targetNamespace = "")
-        String where);
-
-    /**
-     * 
      * @param cliente
      * @return
      *     returns boolean
      */
-    @WebMethod(operationName = "INSERTAR_CLIENTE")
+    @WebMethod(operationName = "MODIFICAR_CLIENTE")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "INSERTAR_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARCLIENTE")
-    @ResponseWrapper(localName = "INSERTAR_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARCLIENTEResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTEResponse")
-    public boolean insertarCLIENTE(
+    @RequestWrapper(localName = "MODIFICAR_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARCLIENTE")
+    @ResponseWrapper(localName = "MODIFICAR_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARCLIENTEResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTEResponse")
+    public boolean modificarCLIENTE(
         @WebParam(name = "cliente", targetNamespace = "")
         Cliente cliente);
 
@@ -90,6 +72,21 @@ public interface QueryCliente {
 
     /**
      * 
+     * @param cliente
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "INSERTAR_CLIENTE")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "INSERTAR_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARCLIENTE")
+    @ResponseWrapper(localName = "INSERTAR_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARCLIENTEResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTEResponse")
+    public boolean insertarCLIENTE(
+        @WebParam(name = "cliente", targetNamespace = "")
+        Cliente cliente);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<Ws.Cliente>
      */
@@ -99,6 +96,24 @@ public interface QueryCliente {
     @ResponseWrapper(localName = "LISTAR_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LISTARCLIENTEResponse")
     @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/LISTAR_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/LISTAR_CLIENTEResponse")
     public List<Cliente> listarCLIENTE();
+
+    /**
+     * 
+     * @param filtro
+     * @param where
+     * @return
+     *     returns java.util.List<Ws.Cliente>
+     */
+    @WebMethod(operationName = "FILTRAR_LISTA_CLIENTE")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "FILTRAR_LISTA_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTACLIENTE")
+    @ResponseWrapper(localName = "FILTRAR_LISTA_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTACLIENTEResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTEResponse")
+    public List<Cliente> filtrarLISTACLIENTE(
+        @WebParam(name = "filtro", targetNamespace = "")
+        String filtro,
+        @WebParam(name = "where", targetNamespace = "")
+        String where);
 
     /**
      * 
@@ -114,20 +129,5 @@ public interface QueryCliente {
     public Cliente buscarCLIENTE(
         @WebParam(name = "nit", targetNamespace = "")
         String nit);
-
-    /**
-     * 
-     * @param cliente
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "MODIFICAR_CLIENTE")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "MODIFICAR_CLIENTE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARCLIENTE")
-    @ResponseWrapper(localName = "MODIFICAR_CLIENTEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARCLIENTEResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTEResponse")
-    public boolean modificarCLIENTE(
-        @WebParam(name = "cliente", targetNamespace = "")
-        Cliente cliente);
 
 }

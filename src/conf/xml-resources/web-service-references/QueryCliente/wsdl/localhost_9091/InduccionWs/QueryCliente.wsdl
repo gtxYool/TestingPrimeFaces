@@ -10,17 +10,11 @@
 <message name="helloResponse">
 <part name="parameters" element="tns:helloResponse"/>
 </message>
-<message name="FILTRAR_LISTA_CLIENTE">
-<part name="parameters" element="tns:FILTRAR_LISTA_CLIENTE"/>
+<message name="MODIFICAR_CLIENTE">
+<part name="parameters" element="tns:MODIFICAR_CLIENTE"/>
 </message>
-<message name="FILTRAR_LISTA_CLIENTEResponse">
-<part name="parameters" element="tns:FILTRAR_LISTA_CLIENTEResponse"/>
-</message>
-<message name="INSERTAR_CLIENTE">
-<part name="parameters" element="tns:INSERTAR_CLIENTE"/>
-</message>
-<message name="INSERTAR_CLIENTEResponse">
-<part name="parameters" element="tns:INSERTAR_CLIENTEResponse"/>
+<message name="MODIFICAR_CLIENTEResponse">
+<part name="parameters" element="tns:MODIFICAR_CLIENTEResponse"/>
 </message>
 <message name="ELIMINAR_CLIENTE">
 <part name="parameters" element="tns:ELIMINAR_CLIENTE"/>
@@ -28,11 +22,23 @@
 <message name="ELIMINAR_CLIENTEResponse">
 <part name="parameters" element="tns:ELIMINAR_CLIENTEResponse"/>
 </message>
+<message name="INSERTAR_CLIENTE">
+<part name="parameters" element="tns:INSERTAR_CLIENTE"/>
+</message>
+<message name="INSERTAR_CLIENTEResponse">
+<part name="parameters" element="tns:INSERTAR_CLIENTEResponse"/>
+</message>
 <message name="LISTAR_CLIENTE">
 <part name="parameters" element="tns:LISTAR_CLIENTE"/>
 </message>
 <message name="LISTAR_CLIENTEResponse">
 <part name="parameters" element="tns:LISTAR_CLIENTEResponse"/>
+</message>
+<message name="FILTRAR_LISTA_CLIENTE">
+<part name="parameters" element="tns:FILTRAR_LISTA_CLIENTE"/>
+</message>
+<message name="FILTRAR_LISTA_CLIENTEResponse">
+<part name="parameters" element="tns:FILTRAR_LISTA_CLIENTEResponse"/>
 </message>
 <message name="BUSCAR_CLIENTE">
 <part name="parameters" element="tns:BUSCAR_CLIENTE"/>
@@ -40,40 +46,34 @@
 <message name="BUSCAR_CLIENTEResponse">
 <part name="parameters" element="tns:BUSCAR_CLIENTEResponse"/>
 </message>
-<message name="MODIFICAR_CLIENTE">
-<part name="parameters" element="tns:MODIFICAR_CLIENTE"/>
-</message>
-<message name="MODIFICAR_CLIENTEResponse">
-<part name="parameters" element="tns:MODIFICAR_CLIENTEResponse"/>
-</message>
 <portType name="QueryCliente">
 <operation name="hello">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="FILTRAR_LISTA_CLIENTE">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTERequest" message="tns:FILTRAR_LISTA_CLIENTE"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTEResponse" message="tns:FILTRAR_LISTA_CLIENTEResponse"/>
-</operation>
-<operation name="INSERTAR_CLIENTE">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTERequest" message="tns:INSERTAR_CLIENTE"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTEResponse" message="tns:INSERTAR_CLIENTEResponse"/>
+<operation name="MODIFICAR_CLIENTE">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTERequest" message="tns:MODIFICAR_CLIENTE"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTEResponse" message="tns:MODIFICAR_CLIENTEResponse"/>
 </operation>
 <operation name="ELIMINAR_CLIENTE">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/ELIMINAR_CLIENTERequest" message="tns:ELIMINAR_CLIENTE"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/ELIMINAR_CLIENTEResponse" message="tns:ELIMINAR_CLIENTEResponse"/>
 </operation>
+<operation name="INSERTAR_CLIENTE">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTERequest" message="tns:INSERTAR_CLIENTE"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/INSERTAR_CLIENTEResponse" message="tns:INSERTAR_CLIENTEResponse"/>
+</operation>
 <operation name="LISTAR_CLIENTE">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/LISTAR_CLIENTERequest" message="tns:LISTAR_CLIENTE"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/LISTAR_CLIENTEResponse" message="tns:LISTAR_CLIENTEResponse"/>
 </operation>
+<operation name="FILTRAR_LISTA_CLIENTE">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTERequest" message="tns:FILTRAR_LISTA_CLIENTE"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/FILTRAR_LISTA_CLIENTEResponse" message="tns:FILTRAR_LISTA_CLIENTEResponse"/>
+</operation>
 <operation name="BUSCAR_CLIENTE">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/BUSCAR_CLIENTERequest" message="tns:BUSCAR_CLIENTE"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/BUSCAR_CLIENTEResponse" message="tns:BUSCAR_CLIENTEResponse"/>
-</operation>
-<operation name="MODIFICAR_CLIENTE">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTERequest" message="tns:MODIFICAR_CLIENTE"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryCliente/MODIFICAR_CLIENTEResponse" message="tns:MODIFICAR_CLIENTEResponse"/>
 </operation>
 </portType>
 <binding name="QueryClientePortBinding" type="tns:QueryCliente">
@@ -87,16 +87,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="FILTRAR_LISTA_CLIENTE">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="INSERTAR_CLIENTE">
+<operation name="MODIFICAR_CLIENTE">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -114,6 +105,15 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="INSERTAR_CLIENTE">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="LISTAR_CLIENTE">
 <soap:operation soapAction=""/>
 <input>
@@ -123,7 +123,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="BUSCAR_CLIENTE">
+<operation name="FILTRAR_LISTA_CLIENTE">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -132,7 +132,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="MODIFICAR_CLIENTE">
+<operation name="BUSCAR_CLIENTE">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

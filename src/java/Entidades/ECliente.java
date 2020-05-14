@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import Ws.Cliente;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
@@ -13,14 +14,30 @@ import javafx.collections.FXCollections;
  *
  * @author AHERNANDEZ
  */
-public class Cliente implements Serializable  {
+public class ECliente implements Serializable {
 
     private String nombre;
     private String nit;
     private String direccion;
     private String id;
-    
+
     //------------------------------------ GETTERS AND SETTERS-----------------------------------------//
+    public ECliente() {
+    }
+
+    public ECliente(String nombre, String nit, String direccion, String id) {
+        this.nombre = nombre;
+        this.nit = nit;
+        this.direccion = direccion;
+        this.id = id;
+    }
+
+    public ECliente(Cliente cl) {
+        this.nombre = cl.getNombre();
+        this.nit = cl.getNit();
+        this.direccion = cl.getDireccion();
+        this.id = String.valueOf(cl.getId());
+    }
 
     public String getNombre() {
         return nombre;

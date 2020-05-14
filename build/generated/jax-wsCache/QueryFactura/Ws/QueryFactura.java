@@ -27,66 +27,21 @@ public interface QueryFactura {
 
     /**
      * 
-     * @param filtro
-     * @param where
+     * @param arg1
+     * @param arg0
      * @return
-     *     returns java.util.List<Ws.Factura>
+     *     returns java.util.List<Ws.DetalleFactura>
      */
-    @WebMethod(operationName = "FILTRAR_LISTA_FACTURA")
+    @WebMethod(operationName = "getDetalles_factura")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "FILTRAR_LISTA_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTAFACTURA")
-    @ResponseWrapper(localName = "FILTRAR_LISTA_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTAFACTURAResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURAResponse")
-    public List<Factura> filtrarLISTAFACTURA(
-        @WebParam(name = "filtro", targetNamespace = "")
-        String filtro,
-        @WebParam(name = "where", targetNamespace = "")
-        String where);
-
-    /**
-     * 
-     * @param factura
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "INSERTAR_FACTURA")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "INSERTAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARFACTURA")
-    @ResponseWrapper(localName = "INSERTAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARFACTURAResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURAResponse")
-    public boolean insertarFACTURA(
-        @WebParam(name = "Factura", targetNamespace = "")
-        Factura factura);
-
-    /**
-     * 
-     * @param factura
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "ELIMINAR_FACTURA")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "ELIMINAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.ELIMINARFACTURA")
-    @ResponseWrapper(localName = "ELIMINAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.ELIMINARFACTURAResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURAResponse")
-    public boolean eliminarFACTURA(
-        @WebParam(name = "factura", targetNamespace = "")
-        Factura factura);
-
-    /**
-     * 
-     * @param factura
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "MODIFICAR_FACTURA")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "MODIFICAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARFACTURA")
-    @ResponseWrapper(localName = "MODIFICAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARFACTURAResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURAResponse")
-    public boolean modificarFACTURA(
-        @WebParam(name = "factura", targetNamespace = "")
-        Factura factura);
+    @RequestWrapper(localName = "getDetalles_factura", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.GetDetallesFactura")
+    @ResponseWrapper(localName = "getDetalles_facturaResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.GetDetallesFacturaResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaRequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaResponse")
+    public List<DetalleFactura> getDetallesFactura(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
     /**
      * 
@@ -120,20 +75,65 @@ public interface QueryFactura {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param factura
      * @return
-     *     returns java.util.List<Ws.DetalleFactura>
+     *     returns boolean
      */
-    @WebMethod(operationName = "getDetalles_factura")
+    @WebMethod(operationName = "INSERTAR_FACTURA")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getDetalles_factura", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.GetDetallesFactura")
-    @ResponseWrapper(localName = "getDetalles_facturaResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.GetDetallesFacturaResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaRequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaResponse")
-    public List<DetalleFactura> getDetallesFactura(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
+    @RequestWrapper(localName = "INSERTAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARFACTURA")
+    @ResponseWrapper(localName = "INSERTAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.INSERTARFACTURAResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURAResponse")
+    public boolean insertarFACTURA(
+        @WebParam(name = "Factura", targetNamespace = "")
+        Factura factura);
+
+    /**
+     * 
+     * @param filtro
+     * @param where
+     * @return
+     *     returns java.util.List<Ws.Factura>
+     */
+    @WebMethod(operationName = "FILTRAR_LISTA_FACTURA")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "FILTRAR_LISTA_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTAFACTURA")
+    @ResponseWrapper(localName = "FILTRAR_LISTA_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.FILTRARLISTAFACTURAResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURAResponse")
+    public List<Factura> filtrarLISTAFACTURA(
+        @WebParam(name = "filtro", targetNamespace = "")
+        String filtro,
+        @WebParam(name = "where", targetNamespace = "")
+        String where);
+
+    /**
+     * 
+     * @param factura
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "ELIMINAR_FACTURA")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ELIMINAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.ELIMINARFACTURA")
+    @ResponseWrapper(localName = "ELIMINAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.ELIMINARFACTURAResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURAResponse")
+    public boolean eliminarFACTURA(
+        @WebParam(name = "factura", targetNamespace = "")
+        Factura factura);
+
+    /**
+     * 
+     * @param factura
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "MODIFICAR_FACTURA")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "MODIFICAR_FACTURA", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARFACTURA")
+    @ResponseWrapper(localName = "MODIFICAR_FACTURAResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.MODIFICARFACTURAResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURARequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURAResponse")
+    public boolean modificarFACTURA(
+        @WebParam(name = "factura", targetNamespace = "")
+        Factura factura);
 
 }

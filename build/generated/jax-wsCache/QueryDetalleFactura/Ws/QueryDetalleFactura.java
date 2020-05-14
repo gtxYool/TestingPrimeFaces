@@ -28,42 +28,6 @@ public interface QueryDetalleFactura {
     /**
      * 
      * @param serieFactura
-     * @param numeroFactura
-     * @return
-     *     returns int
-     */
-    @WebMethod(operationName = "LAST_NUMDETALLE")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "LAST_NUMDETALLE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LASTNUMDETALLE")
-    @ResponseWrapper(localName = "LAST_NUMDETALLEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LASTNUMDETALLEResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLEResponse")
-    public int lastNUMDETALLE(
-        @WebParam(name = "numero_factura", targetNamespace = "")
-        String numeroFactura,
-        @WebParam(name = "serie_factura", targetNamespace = "")
-        String serieFactura);
-
-    /**
-     * 
-     * @param filtro
-     * @param where
-     * @return
-     *     returns java.util.List<Ws.DetalleFactura>
-     */
-    @WebMethod(operationName = "LISTAR_DETALLES")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "LISTAR_DETALLES", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LISTARDETALLES")
-    @ResponseWrapper(localName = "LISTAR_DETALLESResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LISTARDETALLESResponse")
-    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESRequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESResponse")
-    public List<DetalleFactura> listarDETALLES(
-        @WebParam(name = "filtro", targetNamespace = "")
-        String filtro,
-        @WebParam(name = "where", targetNamespace = "")
-        String where);
-
-    /**
-     * 
-     * @param serieFactura
      * @param numeroFatura
      * @return
      *     returns java.util.List<Ws.DetalleFactura>
@@ -123,5 +87,41 @@ public interface QueryDetalleFactura {
     public boolean eliminarDETALLE(
         @WebParam(name = "factura", targetNamespace = "")
         Factura factura);
+
+    /**
+     * 
+     * @param filtro
+     * @param where
+     * @return
+     *     returns java.util.List<Ws.DetalleFactura>
+     */
+    @WebMethod(operationName = "LISTAR_DETALLES")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "LISTAR_DETALLES", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LISTARDETALLES")
+    @ResponseWrapper(localName = "LISTAR_DETALLESResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LISTARDETALLESResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESRequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESResponse")
+    public List<DetalleFactura> listarDETALLES(
+        @WebParam(name = "filtro", targetNamespace = "")
+        String filtro,
+        @WebParam(name = "where", targetNamespace = "")
+        String where);
+
+    /**
+     * 
+     * @param serieFactura
+     * @param numeroFactura
+     * @return
+     *     returns int
+     */
+    @WebMethod(operationName = "LAST_NUMDETALLE")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "LAST_NUMDETALLE", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LASTNUMDETALLE")
+    @ResponseWrapper(localName = "LAST_NUMDETALLEResponse", targetNamespace = "http://EjemploWS.InduccionWs.guatx.com/", className = "Ws.LASTNUMDETALLEResponse")
+    @Action(input = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLERequest", output = "http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLEResponse")
+    public int lastNUMDETALLE(
+        @WebParam(name = "numero_factura", targetNamespace = "")
+        String numeroFactura,
+        @WebParam(name = "serie_factura", targetNamespace = "")
+        String serieFactura);
 
 }

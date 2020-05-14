@@ -88,6 +88,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="LISTAR">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="LISTARResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:factura" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="INSERTAR_FACTURA">
 <xs:sequence>
 <xs:element name="Factura" type="tns:factura" minOccurs="0"/>
@@ -97,16 +107,6 @@
 <xs:complexType name="INSERTAR_FACTURAResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="LISTAR">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="LISTARResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:factura" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 

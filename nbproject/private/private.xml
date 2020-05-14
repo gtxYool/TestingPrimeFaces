@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/web/ModificarCliente.xhtml</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/web/ListarFacturas.xhtml</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/src/java/ViewCtrl/ListarClienteViewCtrl.java</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/src/java/Entidades/EDetalleFactura.java</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/src/java/ViewCtrl/AgregarFacturaCtrl.java</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/src/java/Entidades/ECliente.java</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/web/ListarClientes.xhtml</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/src/java/Entidades/EFactura.java</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/web/Login.xhtml</file>
+            <file>file:/C:/Users/AHERNANDEZ/Documents/NetBeansProjects/TestingPRimeFaces/web/AgregarFactura.xhtml</file>
+        </group>
     </open-files>
 </project-private>

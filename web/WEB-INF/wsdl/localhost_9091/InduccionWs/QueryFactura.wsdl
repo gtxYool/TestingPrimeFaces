@@ -4,29 +4,11 @@
 <xsd:import namespace="http://EjemploWS.InduccionWs.guatx.com/" schemaLocation="http://localhost:9091/InduccionWs/QueryFactura?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="FILTRAR_LISTA_FACTURA">
-<part name="parameters" element="tns:FILTRAR_LISTA_FACTURA"/>
+<message name="getDetalles_factura">
+<part name="parameters" element="tns:getDetalles_factura"/>
 </message>
-<message name="FILTRAR_LISTA_FACTURAResponse">
-<part name="parameters" element="tns:FILTRAR_LISTA_FACTURAResponse"/>
-</message>
-<message name="INSERTAR_FACTURA">
-<part name="parameters" element="tns:INSERTAR_FACTURA"/>
-</message>
-<message name="INSERTAR_FACTURAResponse">
-<part name="parameters" element="tns:INSERTAR_FACTURAResponse"/>
-</message>
-<message name="ELIMINAR_FACTURA">
-<part name="parameters" element="tns:ELIMINAR_FACTURA"/>
-</message>
-<message name="ELIMINAR_FACTURAResponse">
-<part name="parameters" element="tns:ELIMINAR_FACTURAResponse"/>
-</message>
-<message name="MODIFICAR_FACTURA">
-<part name="parameters" element="tns:MODIFICAR_FACTURA"/>
-</message>
-<message name="MODIFICAR_FACTURAResponse">
-<part name="parameters" element="tns:MODIFICAR_FACTURAResponse"/>
+<message name="getDetalles_facturaResponse">
+<part name="parameters" element="tns:getDetalles_facturaResponse"/>
 </message>
 <message name="BUSCAR_FACTURA">
 <part name="parameters" element="tns:BUSCAR_FACTURA"/>
@@ -40,28 +22,34 @@
 <message name="LISTARResponse">
 <part name="parameters" element="tns:LISTARResponse"/>
 </message>
-<message name="getDetalles_factura">
-<part name="parameters" element="tns:getDetalles_factura"/>
+<message name="INSERTAR_FACTURA">
+<part name="parameters" element="tns:INSERTAR_FACTURA"/>
 </message>
-<message name="getDetalles_facturaResponse">
-<part name="parameters" element="tns:getDetalles_facturaResponse"/>
+<message name="INSERTAR_FACTURAResponse">
+<part name="parameters" element="tns:INSERTAR_FACTURAResponse"/>
+</message>
+<message name="FILTRAR_LISTA_FACTURA">
+<part name="parameters" element="tns:FILTRAR_LISTA_FACTURA"/>
+</message>
+<message name="FILTRAR_LISTA_FACTURAResponse">
+<part name="parameters" element="tns:FILTRAR_LISTA_FACTURAResponse"/>
+</message>
+<message name="ELIMINAR_FACTURA">
+<part name="parameters" element="tns:ELIMINAR_FACTURA"/>
+</message>
+<message name="ELIMINAR_FACTURAResponse">
+<part name="parameters" element="tns:ELIMINAR_FACTURAResponse"/>
+</message>
+<message name="MODIFICAR_FACTURA">
+<part name="parameters" element="tns:MODIFICAR_FACTURA"/>
+</message>
+<message name="MODIFICAR_FACTURAResponse">
+<part name="parameters" element="tns:MODIFICAR_FACTURAResponse"/>
 </message>
 <portType name="QueryFactura">
-<operation name="FILTRAR_LISTA_FACTURA">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURARequest" message="tns:FILTRAR_LISTA_FACTURA"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURAResponse" message="tns:FILTRAR_LISTA_FACTURAResponse"/>
-</operation>
-<operation name="INSERTAR_FACTURA">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURARequest" message="tns:INSERTAR_FACTURA"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURAResponse" message="tns:INSERTAR_FACTURAResponse"/>
-</operation>
-<operation name="ELIMINAR_FACTURA">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURARequest" message="tns:ELIMINAR_FACTURA"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURAResponse" message="tns:ELIMINAR_FACTURAResponse"/>
-</operation>
-<operation name="MODIFICAR_FACTURA">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURARequest" message="tns:MODIFICAR_FACTURA"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURAResponse" message="tns:MODIFICAR_FACTURAResponse"/>
+<operation name="getDetalles_factura">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaRequest" message="tns:getDetalles_factura"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaResponse" message="tns:getDetalles_facturaResponse"/>
 </operation>
 <operation name="BUSCAR_FACTURA">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/BUSCAR_FACTURARequest" message="tns:BUSCAR_FACTURA"/>
@@ -71,41 +59,26 @@
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/LISTARRequest" message="tns:LISTAR"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/LISTARResponse" message="tns:LISTARResponse"/>
 </operation>
-<operation name="getDetalles_factura">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaRequest" message="tns:getDetalles_factura"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/getDetalles_facturaResponse" message="tns:getDetalles_facturaResponse"/>
+<operation name="INSERTAR_FACTURA">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURARequest" message="tns:INSERTAR_FACTURA"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/INSERTAR_FACTURAResponse" message="tns:INSERTAR_FACTURAResponse"/>
+</operation>
+<operation name="FILTRAR_LISTA_FACTURA">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURARequest" message="tns:FILTRAR_LISTA_FACTURA"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/FILTRAR_LISTA_FACTURAResponse" message="tns:FILTRAR_LISTA_FACTURAResponse"/>
+</operation>
+<operation name="ELIMINAR_FACTURA">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURARequest" message="tns:ELIMINAR_FACTURA"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/ELIMINAR_FACTURAResponse" message="tns:ELIMINAR_FACTURAResponse"/>
+</operation>
+<operation name="MODIFICAR_FACTURA">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURARequest" message="tns:MODIFICAR_FACTURA"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryFactura/MODIFICAR_FACTURAResponse" message="tns:MODIFICAR_FACTURAResponse"/>
 </operation>
 </portType>
 <binding name="QueryFacturaPortBinding" type="tns:QueryFactura">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="FILTRAR_LISTA_FACTURA">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="INSERTAR_FACTURA">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="ELIMINAR_FACTURA">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="MODIFICAR_FACTURA">
+<operation name="getDetalles_factura">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -132,7 +105,34 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getDetalles_factura">
+<operation name="INSERTAR_FACTURA">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="FILTRAR_LISTA_FACTURA">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="ELIMINAR_FACTURA">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="MODIFICAR_FACTURA">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

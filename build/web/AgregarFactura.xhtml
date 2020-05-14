@@ -10,27 +10,54 @@
 
         <h:form style="display: flex; align-items: center; justify-content: center">
             <p:growl showDetail="true" life="2500" autoUpdate="true"/>
-            <p:panelGrid columns="2">
+            <p:ajaxStatus>
+                <f:facet name="start">
+                    <h:outputText value="Start!" />
+                </f:facet>
+                <f:facet name="complete">
+                    <h:outputText value="Done!" />
+                </f:facet>
+            </p:ajaxStatus>
+            <p:panelGrid id="grido" columns="2">
                 <f:facet name="header">
                     <h:outputLabel value="Detalle Factura"/>
                 </f:facet>
-                <h:outputLabel for="nit" value="*Nit:"/>
-                <p:inputText id="nit" maxlength="20" required="true"/>
-                <h:outputLabel for="cliente" value="*Cliente:"/>
-                <p:inputText id="cliente" maxlength="20" required="true"/>
-
 
                 <h:outputLabel for="Cod" value="*Código:"/>
-                <p:inputText id="cod" maxlength="10" required="true"/>
+                <p:inputText id="cod" maxlength="10" value="#{agregarFact.defac.codproducto}" required="true" requiredMessage="Ingrese código del producto"/>
                 <h:outputLabel for="precio" value="*Precio:"/>
-                <p:inputText id="precio" type="number" maxlength="9" required="true"/>
+                <p:inputText id="precio" type="number" maxlength="9" value="#{agregarFact.defac.precio}"  required="true" requiredMessage="Ingrese precio"/>
                 <h:outputLabel for="cantidad" value="*Cantidad:"/>
-                <p:inputText id="cantidad" type="number" maxlength="9" required="true"/>
-                <f:facet name="footer" >   
-                    <p:commandButton value="Agregar" style="width: auto"/>
-                    <p:commandButton value="Guardar" style="width: auto"/>
+                <p:inputText id="cantidad" type="number" maxlength="9" value="#{agregarFact.defac.cantidad}" required="true" requiredMessage="Ingrese cantidad"/> 
+
+                <f:facet id="footer" name="footer" >   
+                    <p:commandButton id="Agregar" value="Agregar" process="grido" update="grido" action="#{agregarFact.agregar()}"/>
+                    <p:commandButton id ="Guardar" process="grido" update="@form"  value="Guardar" type="button" onclick="PF('cd').show()" action="#{agregarFact.agregar()}"/>
                 </f:facet>
             </p:panelGrid>
+            <p:confirmDialog id="over" widgetVar="cd" hideEffect="fade" showEffect="fade"
+                             message="Ingrese los Datos para la factura"
+                             header="Guardar Factura" severity="alert" >
+                <p:panelGrid id="overgrid" columns="2">
+                    <f:facet name="header">
+                        <h:outputLabel value="Factura"/>
+                    </f:facet>
+                    <h:outputLabel id="serie" value="#{agregarFact.factura.seriefactura}"/>
+                    <h:outputLabel id="numero" value="#{agregarFact.factura.numerofactura}"/>
+
+                    <h:outputLabel for="nit" value="*Nit:"/>
+                    <p:inputText id="nit" value="#{agregarFact.cliente.nit}" maxlength="20" required="true" requiredMessage="Ingrese nit"/>
+                    <h:outputLabel for="cliente" value="*Cliente:"/>
+                    <p:inputText id="cliente" value="#{agregarFact.cliente.nombre}" maxlength="20" required="true" requiredMessage="Ingrese nombre cliente"/>
+
+                    <h:outputLabel for="total" value="Total:" />
+                    <h:outputLabel id="total" value="#{agregarFact.factura.total}" />
+
+                    <f:facet name="footer" >   
+                        <p:commandButton value="Guardar" process="@this" update="@form" action="#{agregarFact.guardar()}"/>
+                    </f:facet>
+                </p:panelGrid>
+            </p:confirmDialog>
 
         </h:form>
 

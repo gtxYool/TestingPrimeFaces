@@ -4,18 +4,6 @@
 <xsd:import namespace="http://EjemploWS.InduccionWs.guatx.com/" schemaLocation="http://localhost:9091/InduccionWs/QueryDetalleFactura?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="LAST_NUMDETALLE">
-<part name="parameters" element="tns:LAST_NUMDETALLE"/>
-</message>
-<message name="LAST_NUMDETALLEResponse">
-<part name="parameters" element="tns:LAST_NUMDETALLEResponse"/>
-</message>
-<message name="LISTAR_DETALLES">
-<part name="parameters" element="tns:LISTAR_DETALLES"/>
-</message>
-<message name="LISTAR_DETALLESResponse">
-<part name="parameters" element="tns:LISTAR_DETALLESResponse"/>
-</message>
 <message name="LISTAR_DETALLES_FACTURA">
 <part name="parameters" element="tns:LISTAR_DETALLES_FACTURA"/>
 </message>
@@ -40,15 +28,19 @@
 <message name="ELIMINAR__DETALLEResponse">
 <part name="parameters" element="tns:ELIMINAR__DETALLEResponse"/>
 </message>
+<message name="LISTAR_DETALLES">
+<part name="parameters" element="tns:LISTAR_DETALLES"/>
+</message>
+<message name="LISTAR_DETALLESResponse">
+<part name="parameters" element="tns:LISTAR_DETALLESResponse"/>
+</message>
+<message name="LAST_NUMDETALLE">
+<part name="parameters" element="tns:LAST_NUMDETALLE"/>
+</message>
+<message name="LAST_NUMDETALLEResponse">
+<part name="parameters" element="tns:LAST_NUMDETALLEResponse"/>
+</message>
 <portType name="QueryDetalleFactura">
-<operation name="LAST_NUMDETALLE">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLERequest" message="tns:LAST_NUMDETALLE"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLEResponse" message="tns:LAST_NUMDETALLEResponse"/>
-</operation>
-<operation name="LISTAR_DETALLES">
-<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESRequest" message="tns:LISTAR_DETALLES"/>
-<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESResponse" message="tns:LISTAR_DETALLESResponse"/>
-</operation>
 <operation name="LISTAR_DETALLES_FACTURA">
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLES_FACTURARequest" message="tns:LISTAR_DETALLES_FACTURA"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLES_FACTURAResponse" message="tns:LISTAR_DETALLES_FACTURAResponse"/>
@@ -65,27 +57,17 @@
 <input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/ELIMINAR__DETALLERequest" message="tns:ELIMINAR__DETALLE"/>
 <output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/ELIMINAR__DETALLEResponse" message="tns:ELIMINAR__DETALLEResponse"/>
 </operation>
+<operation name="LISTAR_DETALLES">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESRequest" message="tns:LISTAR_DETALLES"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LISTAR_DETALLESResponse" message="tns:LISTAR_DETALLESResponse"/>
+</operation>
+<operation name="LAST_NUMDETALLE">
+<input wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLERequest" message="tns:LAST_NUMDETALLE"/>
+<output wsam:Action="http://EjemploWS.InduccionWs.guatx.com/QueryDetalleFactura/LAST_NUMDETALLEResponse" message="tns:LAST_NUMDETALLEResponse"/>
+</operation>
 </portType>
 <binding name="QueryDetalleFacturaPortBinding" type="tns:QueryDetalleFactura">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="LAST_NUMDETALLE">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="LISTAR_DETALLES">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="LISTAR_DETALLES_FACTURA">
 <soap:operation soapAction=""/>
 <input>
@@ -114,6 +96,24 @@
 </output>
 </operation>
 <operation name="ELIMINAR__DETALLE">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="LISTAR_DETALLES">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="LAST_NUMDETALLE">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
