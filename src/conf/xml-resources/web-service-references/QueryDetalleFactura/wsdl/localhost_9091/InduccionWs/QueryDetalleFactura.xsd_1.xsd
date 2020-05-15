@@ -61,6 +61,7 @@
 <xs:element name="nit" type="xs:string" minOccurs="0"/>
 <xs:element name="numerofactura" type="xs:string" minOccurs="0"/>
 <xs:element name="seriefactura" type="xs:string" minOccurs="0"/>
+<xs:element name="total" type="xs:double"/>
 </xs:sequence>
 </xs:complexType>
 

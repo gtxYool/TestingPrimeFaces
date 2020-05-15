@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:9091/InduccionWs/QueryCliente?wsdl" uri="src/conf/xml-resources/web-service-references/QueryCliente/wsdl/localhost_9091/InduccionWs/QueryCliente.wsdl"/>
-    <system systemId="http://localhost:9091/InduccionWs/QueryCliente?WSDL" uri="src/conf/xml-resources/web-service-references/QueryCliente/wsdl/localhost_9091/InduccionWs/QueryCliente.wsdl"/>
-    <system systemId="http://localhost:9091/InduccionWs/QueryCliente?xsd=1" uri="src/conf/xml-resources/web-service-references/QueryCliente/wsdl/localhost_9091/InduccionWs/QueryCliente.xsd_1.xsd"/>
     <system systemId="http://localhost:9091/InduccionWs/QueryFactura?WSDL" uri="src/conf/xml-resources/web-service-references/QueryFactura/wsdl/localhost_9091/InduccionWs/QueryFactura.wsdl"/>
     <system systemId="http://localhost:9091/InduccionWs/QueryFactura?xsd=1" uri="src/conf/xml-resources/web-service-references/QueryFactura/wsdl/localhost_9091/InduccionWs/QueryFactura.xsd_1.xsd"/>
+    <system systemId="http://localhost:9091/InduccionWs/QueryCliente?WSDL" uri="src/conf/xml-resources/web-service-references/QueryCliente/wsdl/localhost_9091/InduccionWs/QueryCliente.wsdl"/>
+    <system systemId="http://localhost:9091/InduccionWs/QueryCliente?xsd=1" uri="src/conf/xml-resources/web-service-references/QueryCliente/wsdl/localhost_9091/InduccionWs/QueryCliente.xsd_1.xsd"/>
     <system systemId="http://localhost:9091/InduccionWs/QueryDetalleFactura?WSDL" uri="src/conf/xml-resources/web-service-references/QueryDetalleFactura/wsdl/localhost_9091/InduccionWs/QueryDetalleFactura.wsdl"/>
     <system systemId="http://localhost:9091/InduccionWs/QueryDetalleFactura?xsd=1" uri="src/conf/xml-resources/web-service-references/QueryDetalleFactura/wsdl/localhost_9091/InduccionWs/QueryDetalleFactura.xsd_1.xsd"/>
 </catalog>

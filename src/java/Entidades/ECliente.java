@@ -23,6 +23,10 @@ public class ECliente implements Serializable {
 
     //------------------------------------ GETTERS AND SETTERS-----------------------------------------//
     public ECliente() {
+        nombre="";
+        nit="";
+        direccion="";
+        id="";
     }
 
     public ECliente(String nombre, String nit, String direccion, String id) {

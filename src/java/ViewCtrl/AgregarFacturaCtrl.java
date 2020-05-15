@@ -36,6 +36,7 @@ public class AgregarFacturaCtrl implements Serializable {
     private EDetalleFactura defac;
     private EFactura factura;
     private ECliente cliente;
+    double total;
 
     public AgregarFacturaCtrl() {
 
@@ -47,16 +48,44 @@ public class AgregarFacturaCtrl implements Serializable {
         defac = new EDetalleFactura();
         factura = new EFactura();
         cliente = new ECliente();
-
+        total=0.0;
     }
 
-    public void guardar() {
+    public boolean guardar() {
         if (detalles != null) {
-            System.out.println("-------SAVE-----");
-            for (EDetalleFactura d : detalles) {
-                System.out.println(d.getCodproducto());
+            if (cliente!=null) {
+                if (!cliente.getNit().equalsIgnoreCase("")) {
+                    Cliente cl = buscarCLIENTE(cliente.getNit());
+                    if (cl != null) {
+                        cliente = new ECliente(cl);
+                        factura.setNit(cliente.getNit());
+                        factura.setNumerofactura("171717");
+                        factura.setSeriefactura("17");
+                        factura.setTotal(total);
+                        if (insertarFACTURA(cast(factura))) {
+                            System.out.println("Factura Insertada");
+                            int i=1;
+                            for (EDetalleFactura det : detalles) {
+                                det.setNumerofactura("171717");
+                                det.setSeriefactura("17");
+                                det.setNumdetalle(i++);
+                                det.setObservaciones("funciona porfavor es lo unico que pido hahahaha");
+                                if (insertarDETALLE(cast(det))) {
+                                    System.out.println(det.getCodproducto());
+                                    System.out.println("Detalle Insertado");
+                                }
+                            }
+                             System.out.println("-------SAVE-----");
+                        }
+                    } else {
+                        return false;
+                    }
+                }
+            }else{
+                System.out.println("cliente nulo");
             }
         }
+        return false;
     }
 
     public void agregar() {
@@ -64,7 +93,9 @@ public class AgregarFacturaCtrl implements Serializable {
         if (defac != null) {
             System.out.println("-------- ADD -----");
             detalles.add(defac);
+            total+=defac.getCantidad()*defac.getPrecio();
             defac = new EDetalleFactura();
+            System.out.println("total acumulado: "+total);
         }
     }
 
@@ -75,7 +106,7 @@ public class AgregarFacturaCtrl implements Serializable {
         fc.setNit(fac.getNit());
         fc.setNumerofactura(fac.getNumerofactura());
         fc.setSeriefactura(fac.getSeriefactura());
-
+        fc.setTotal(total);
         return fc;
     }
 

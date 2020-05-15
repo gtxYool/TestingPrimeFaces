@@ -54,7 +54,7 @@
                     <h:outputLabel id="total" value="#{agregarFact.factura.total}" />
 
                     <f:facet name="footer" >   
-                        <p:commandButton value="Guardar" process="@this" update="@form" action="#{agregarFact.guardar()}"/>
+                        <p:commandButton value="Guardar" process="over" update="@form" action="#{agregarFact.guardar()}"/>
                     </f:facet>
                 </p:panelGrid>
             </p:confirmDialog>

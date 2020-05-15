@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="nit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="numerofactura" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="seriefactura" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="total" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,7 +39,8 @@ import javax.xml.bind.annotation.XmlType;
     "fecha",
     "nit",
     "numerofactura",
-    "seriefactura"
+    "seriefactura",
+    "total"
 })
 public class Factura {
 
@@ -48,6 +50,7 @@ public class Factura {
     protected String nit;
     protected String numerofactura;
     protected String seriefactura;
+    protected double total;
 
     /**
      * Gets the value of the detallefactura property.
@@ -172,6 +175,22 @@ public class Factura {
      */
     public void setSeriefactura(String value) {
         this.seriefactura = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad total.
+     * 
+     */
+    public double getTotal() {
+        return total;
+    }
+
+    /**
+     * Define el valor de la propiedad total.
+     * 
+     */
+    public void setTotal(double value) {
+        this.total = value;
     }
 
 }
